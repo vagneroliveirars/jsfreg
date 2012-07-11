@@ -50,6 +50,13 @@
 				</h:selectOneMenu>
 				<h:panelGroup/>
 				<h:panelGroup/>
+				
+				Current Weight
+				<h:outputText value="#{userBean.currentWeight}">
+					<f:converter converterId="com.jsfcompref.Weight"/>
+				</h:outputText>
+				<h:panelGroup/>
+				<h:panelGroup/>
 			</h:panelGrid>
 				
 			<p><h:messages/></p>

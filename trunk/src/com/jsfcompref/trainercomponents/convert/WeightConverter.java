@@ -53,7 +53,7 @@ public class WeightConverter implements Converter {
 		// look up the user's preference
 		ValueExpression ve = application.getExpressionFactory().
 				createValueExpression(context.getELContext(), 
-						"#{user.preferences.weightUnits}", Integer.class);
+						"#{userBean.preferences.weightUnits}", Integer.class);
 		
 		try {
 			result = (Integer) ve.getValue(context.getELContext());

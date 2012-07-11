@@ -18,7 +18,16 @@ public class UserBean {
 	protected Date dob;
 	protected String sex;
 	protected String email;
-	protected String serviceLevel = "medium";
+	protected String serviceLevel;
+	protected Float currentWeight;
+	protected Preferences preferences;
+	
+	public UserBean() {
+		this.preferences = new Preferences();
+		this.preferences.setWeightUnits(0);
+		this.serviceLevel = "medium";
+		this.currentWeight = 5f;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -66,6 +75,22 @@ public class UserBean {
 
 	public void setServiceLevel(String serviceLevel) {
 		this.serviceLevel = serviceLevel;
+	}
+	
+	public Float getCurrentWeight() {
+		return currentWeight;
+	}
+
+	public void setCurrentWeight(Float currentWeight) {
+		this.currentWeight = currentWeight;
+	}
+
+	public Preferences getPreferences() {
+		return preferences;
+	}
+
+	public void setPreferences(Preferences preferences) {
+		this.preferences = preferences;
 	}
 
 	public void validateEmail(FacesContext context, UIComponent toValidate,
