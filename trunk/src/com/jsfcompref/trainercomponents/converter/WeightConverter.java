@@ -1,4 +1,4 @@
-package com.jsfcompref.trainercomponents.convert;
+package com.jsfcompref.trainercomponents.converter;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
